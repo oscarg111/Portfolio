@@ -8,6 +8,8 @@ export const NavBar = () => {
       <Link to="/apis"> API Demo </Link>
       <Link to="/profile"> Profile </Link>
       <Link to="/login"> Login</Link>
+      <Link to="/customhooks"> CustomHooks</Link>
+      <Link to="/getCatFact"> Get a Cat Fact!</Link>
     </div>
   );
 };

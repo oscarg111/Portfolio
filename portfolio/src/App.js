@@ -3,13 +3,15 @@ import { useEffect, useState, createContext } from "react";
 import { ToDoList } from "./components/ToDoList";
 import { Apis } from "./components/Apis";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Menu } from "./pages/Menu";
-import { Contact } from "./pages/Contact";
+import { Home } from "./components/Home";
+import { Menu } from "./components/Menu";
+import { Contact } from "./components/Contact";
 import { NavBar } from "./components/Navbar";
-import { Profile } from "./pages/Profile";
+import { Profile } from "./components/Profile";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Form } from "./components/Form";
+import { CustomHooks } from "./components/CustomHooks";
+import { Cat } from "./components/Cat";
 export const AppContext = createContext();
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
               <Route path="/apis" element={<Apis />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/login" element={<Form />} />
+              <Route path="/customhooks" element={<CustomHooks />} />
+              <Route path="/getCatFact" element={<Cat />} />
               {/* Page not found */}
               <Route path="*" element={<h1>Page Not Found!</h1>} />
             </Routes>

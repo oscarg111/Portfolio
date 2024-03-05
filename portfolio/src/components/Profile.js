@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { ChangeProfile } from "../components/ChangeProfile";
+import { ChangeProfile } from "./ChangeProfile";
 import App, { AppContext } from "../App";
 
 export const Profile = () => {
