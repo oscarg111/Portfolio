@@ -12,9 +12,11 @@ interface CreateFormData {
 }
 
 export const CreateForm = () => {
+  // user authentication and navigation variables
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
+  // this describes the shape of the post object
   const schema = yup.object().shape({
     title: yup.string().required("You must add a title"),
     description: yup
@@ -34,6 +36,7 @@ export const CreateForm = () => {
   // ref to collection
   const postsRef = collection(db, "posts"); // specify db and collection
 
+  // here is where we add to the database
   const onCreatePost = async (data: CreateFormData) => {
     await addDoc(postsRef, {
       ...data, // contain all fields in data

@@ -96,6 +96,9 @@ export const Post = (props: Props) => {
       <div className="body">
         <p>{post.description}</p>
       </div>
+      <div className="image">
+        <img src="" />
+      </div>
       <div className="footer">
         <p>@{post.username}</p>
         <button onClick={hasUserLiked ? removeLike : addLike}>
